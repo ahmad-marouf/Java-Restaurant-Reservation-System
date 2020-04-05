@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<orders>
+    <order>
+        <orderCustomer>Brian Johnes</orderCustomer>
+        <orderTableNumber>5</orderTableNumber>
+        <orderedDishes>
+            <name>Fried Potatos</name>
+            <price>30.0</price>
+            <type>appetizer</type>
+        </orderedDishes>
+        <orderedDishes>
+            <name>Molten Cake</name>
+            <price>60.0</price>
+            <type>desert</type>
+        </orderedDishes>
+        <orderPrice>105.0</orderPrice>
+    </order>
+    <order>
+        <orderCustomer>John Doe</orderCustomer>
+        <orderTableNumber>1</orderTableNumber>
+        <orderedDishes>
+            <name>Fried Potatos</name>
+            <price>30.0</price>
+            <type>appetizer</type>
+        </orderedDishes>
+        <orderedDishes>
+            <name>Beef Steak</name>
+            <price>80.0</price>
+            <type>main_course</type>
+        </orderedDishes>
+        <orderedDishes>
+            <name>Apple Pie</name>
+            <price>50.0</price>
+            <type>desert</type>
+        </orderedDishes>
+        <orderPrice>185.0</orderPrice>
+    </order>
+</orders>
