@@ -1,7 +1,7 @@
 Ahmad Abdelrahman Marouf  6543
 
 The program reads from input.xml (same as file in assignment pdf)
-It saves orders in reservations.xml
+It loads and saves orders in reservations.xml
 It saves new users in input.xml
 
 The program loads .jpg images from Dish Images folder
