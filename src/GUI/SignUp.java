@@ -56,6 +56,10 @@ public class SignUp {
                         case -2:
                             error.setText("Account already exits for " + customer.getName());
                             break;
+                        case -3:
+                            error.setText("Please fill out all fields then press the Create Account button");
+
+                            break;
                         case 0:
                             if (alertBox.display("A new account will be created for " + nameField.getText() + "\nContinue?")) {
                                 restaurant.getUser().createUser(customer);

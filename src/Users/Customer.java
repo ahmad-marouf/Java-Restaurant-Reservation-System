@@ -112,11 +112,16 @@ public class Customer extends User {
     }
 
     public int newCustomer(Restaurant restaurant){
-        for (User checkTaken : restaurant.getUser().getUsers()) {
-            if (checkTaken.getUsername().equals(getUsername()))
-                return -1;
-            else if (getName().equals(checkTaken.getName()))
-                return -2;
+
+        if (getName().equals("") || getUsername().equals("") || getPassword().equals(""))
+            return -3;
+        else {
+            for (User checkTaken : restaurant.getUser().getUsers()) {
+                if (checkTaken.getUsername().equals(getUsername()))
+                    return -1;
+                else if (getName().equals(checkTaken.getName()))
+                    return -2;
+            }
         }
         return 0;
     }

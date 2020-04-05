@@ -95,13 +95,16 @@ public class Manager extends User implements Employee {
     }
 
     public int newEmployee(Restaurant restaurant, User user) {
-
+        if (user.getName().equals("") || user.getUsername().equals("") || user.getPassword().equals(""))
+            return -3;
+        else {
             for (User checkTaken : restaurant.getUser().getUsers()) {
                 if (checkTaken.getUsername().equals(user.getUsername()))
                     return -1;
                 else if (user.getName().equals(checkTaken.getName()))
                     return -2;
-                }
+            }
+        }
         return 0;
     }
 

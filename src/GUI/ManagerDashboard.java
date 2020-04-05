@@ -161,9 +161,9 @@ public class ManagerDashboard implements  DashBoard {
         error.setFill(Color.RED);
         AlertBox alertBox = new AlertBox();
 
-        TextField employeeName = new TextField();
-        TextField employeeUsername = new TextField();
-        TextField employeePassword = new TextField();
+        TextField employeeName = new TextField(null);
+        TextField employeeUsername = new TextField(null);
+        TextField employeePassword = new TextField(null);
         ChoiceBox selectRole = new ChoiceBox();
         selectRole.getItems().addAll("Manager", "Waiter", "Cooker");
         GridPane gridPane = new GridPane();
@@ -179,6 +179,9 @@ public class ManagerDashboard implements  DashBoard {
                             break;
                         case -2:
                             error.setText("Account already exits for " + user.getName());
+                            break;
+                        case -3:
+                            error.setText("Please fll out all fields");
                             break;
                         case 0:
                             if (alertBox.display("A new account will be created for " + selectRole.getValue() + " " + employeeName.getText() + "\nContinue?")) {
