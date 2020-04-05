@@ -34,9 +34,10 @@ public class SignUp {
         Label confirmPassLabel = new Label("Enter Password Again :");
         AlertBox alertBox = new AlertBox();
 
-        TextField nameField = new TextField();
-        TextField usernameField = new TextField();
+        TextField nameField = new TextField(null);
+        TextField usernameField = new TextField(null);
         PasswordField passwordField = new PasswordField();
+        passwordField.setText(null);
         PasswordField confirmPassField = new PasswordField();
         Button create = new Button("Create Account");
         Button cancel = new Button("Go Back");
@@ -44,8 +45,8 @@ public class SignUp {
 
         create.setOnAction(e1 ->{
             error.setText("");
-            if (passwordField.getText().equals(confirmPassField.getText())) {
                 try {
+                    if (passwordField.getText().equals(confirmPassField.getText())) {
                     Customer customer = new Customer(nameField.getText(), "Client", usernameField.getText(), passwordField.getText());
                     switch (customer.newCustomer(restaurant)) {
                         case -1:
@@ -61,12 +62,12 @@ public class SignUp {
                             }
                             break;
                     }
+                } else
+                error.setText("Please make sure you entered the same password in both password fields");
                 } catch (NullPointerException | JAXBException n1) {
                     error.setText("Please fill out all fields then press the Create Account button");
                 }
-            } else {
-                error.setText("Please make sure you entered the same password in both password fields");
-            }
+
 
         });
 
