@@ -39,6 +39,7 @@ public class SignUp {
         PasswordField passwordField = new PasswordField();
         passwordField.setText(null);
         PasswordField confirmPassField = new PasswordField();
+        confirmPassField.setText(null);
         Button create = new Button("Create Account");
         Button cancel = new Button("Go Back");
         GridPane gridPane = new GridPane();
