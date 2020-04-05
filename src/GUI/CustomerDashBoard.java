@@ -180,7 +180,6 @@ public class CustomerDashBoard implements DashBoard{
                     orderList.getItems().remove(orderList.getSelectionModel().getSelectedIndex());
                     dishes.remove(orderList.getSelectionModel().getSelectedIndex());
                     for (Dish dish : dishes)
-                        System.out.println(dish.getName());
                     totalPrice.setText("Total Price (Including taxes) : LE " + order.getOrderPrice());
             }
         });
